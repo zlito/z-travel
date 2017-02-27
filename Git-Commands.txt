@@ -1,0 +1,165 @@
+>>> git clone brings from clone files from github to your folder
+Zito@Zito-PC MINGW64 ~/Desktop/ZProject
+$ git clone https://github.com/LearnWebCode/travel-site-files.git
+Cloning into 'travel-site-files'...
+remote: Counting objects: 83, done.
+remote: Compressing objects: 100% (76/76), done.
+remote: Total 83 (delta 5), reused 83 (delta 5), pack-reused 0
+Unpacking objects: 100% (83/83), done.
+
+>>> Clear screen
+Zito@Zito-PC MINGW64 ~/Desktop/ZProject
+$ clear
+
+>>> cd Change directory - you can drag folder into git IDE
+Zito@Zito-PC MINGW64 ~/Desktop/ZProject
+$ cd /c/Users/Zito/Desktop/ZProject/z-travel
+
+>>>> git remote -v   Check files from where your are working
+Zito@Zito-PC MINGW64 ~/Desktop/ZProject/z-travel (master)
+$ git remote -v
+origin  https://github.com/LearnWebCode/travel-site-files.git (fetch) ---> original
+origin  https://github.com/LearnWebCode/travel-site-files.git (push)  ---> original
+
+>>> Sets the work are to your own gitHub repository
+Zito@Zito-PC MINGW64 ~/Desktop/ZProject/z-travel (master)
+$ git remote set-url origin https://github.com/zlito/z-travel.git
+
+>>>  Check your own repository where you gonna be working
+Zito@Zito-PC MINGW64 ~/Desktop/ZProject/z-travel (master)
+$ git remote -v
+origin  https://github.com/zlito/z-travel.git (fetch)
+origin  https://github.com/zlito/z-travel.git (push)
+
+>>> After changes push your changes to gitHub server
+Zito@Zito-PC MINGW64 ~/Desktop/ZProject/z-travel (master)
+$ git push origin master
+Counting objects: 83, done.
+Delta compression using up to 4 threads.
+Compressing objects: 100% (81/81), done.
+Writing objects: 100% (83/83), 3.36 MiB | 666.00 KiB/s, done.
+Total 83 (delta 5), reused 0 (delta 0)
+remote: Resolving deltas: 100% (5/5), done.
+To https://github.com/zlito/z-travel.git
+ * [new branch]      master -> master
+
+ 
+>>> Check status
+Zito@Zito-PC MINGW64 ~/Desktop/ZProject/z-travel (master)
+$ git status
+On branch master
+Your branch is up-to-date with 'origin/master'.
+Changes not staged for commit:
+  (use "git add <file>..." to update what will be committed)
+  (use "git checkout -- <file>..." to discard changes in working directory)
+
+        modified:   app/index.html
+
+no changes added to commit (use "git add" and/or "git commit -a")
+
+>>> Add confirm changes 
+Zito@Zito-PC MINGW64 ~/Desktop/ZProject/z-travel (master)
+$ git add -A
+
+>>> check status (to verify)
+Zito@Zito-PC MINGW64 ~/Desktop/ZProject/z-travel (master)
+$ git status
+On branch master
+Your branch is up-to-date with 'origin/master'.
+Changes to be committed:
+  (use "git reset HEAD <file>..." to unstage)
+
+        modified:   app/index.html
+
+>>>  git commit -m 'comment'   Commit all changes
+Zito@Zito-PC MINGW64 ~/Desktop/ZProject/z-travel (master)
+$ git commit -m 'Added new meta keywords.'
+[master 2ad6968] Added new meta keywords.
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+
+ >>>>>>  git push origin master    Push changes to gitHub server
+Zito@Zito-PC MINGW64 ~/Desktop/ZProject/z-travel (master)
+$ git push origin master
+Counting objects: 4, done.
+Delta compression using up to 4 threads.
+Compressing objects: 100% (4/4), done.
+Writing objects: 100% (4/4), 413 bytes | 0 bytes/s, done.
+Total 4 (delta 1), reused 0 (delta 0)
+remote: Resolving deltas: 100% (1/1), completed with 1 local objects.
+To https://github.com/zlito/z-travel.git
+   d013c11..2ad6968  master -> master
+
+=====================================================
+>>> Creates the Jason file (press enter enter..... )
+Zito@Zito-PC MINGW64 ~/Desktop/ZProject/z-travel (master)
+$ npm init
+
+>>>Install packahe jquery
+Zito@Zito-PC MINGW64 ~/Desktop/ZProject/z-travel (master)
+$ npm install jquery --save
+
+>>> Install package normilize
+Zito@Zito-PC MINGW64 ~/Desktop/ZProject/z-travel (master)
+$ npm install normalize --save
+
+>>> Chcek status
+$ git status
+
+>>>  Add updated file
+ git add -A
+  git status  <<< check status again to verify
+>>>> Push file to gitHub server (access web github to check)
+ git push origin master
+ ======================================
+ >>> Install Gulp globsl for all to use
+ Zito@Zito-PC MINGW64 ~
+$ npm install gulp-cli --global
+
+>>> Install gulp in your project dev Dependency
+Zito@Zito-PC MINGW64 ~/Desktop/ZProject/z-travel (master)
+$ npm install gulp --save-dev
+
+>>>> Create a file with touch
+touch gulpfile.js
+
+>>>> run gulp default task
+Zito@Zito-PC MINGW64 ~/Desktop/ZProject/z-travel (master)
+$ gulp
+>> OR specific task (html or any other name)
+Zito@Zito-PC MINGW64 ~/Desktop/ZProject/z-travel (master)
+$ gulp html
+gulp watch (function on gulp.js watches changes in tasks)
+
+>>> Install gulp-watch package
+ npm install gulp-watch --save-dev
+ 
+>>> Install gulp-postcss package
+npm install gulp-postcss --save-dev
+
+>>> Install autoprefixer 
+npm install autoprefixer --save-dev
+>> Install variables for css
+npm install postcss-simple-vars --save-dev
+>>> install Nested package for css
+npm install postcss-nested --save-dev
+
+>> install import
+npm install postcss-import --save-dev
+
+>>> Install normalize.css
+npm install normalize.css --save
+
+>>> Install Browser-sync
+npm install browser-sync --save-dev
+
+>>>> Modify gulpfile.js separate into tasks and watch 
+>>>> gulpfile will have required ("imports)") to watch and tasks
+
+>>>>Install Mixins for mobile first dev
+npm install postcss-mixins --save-dev
+
+>>>Gulp Branches
+git branch (name of branch)  create brancg
+git checkout -b our-features  <<--- create and switch to branch
+
+
