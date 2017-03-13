@@ -63,7 +63,7 @@
 /******/ 	__webpack_require__.p = "";
 
 /******/ 	// Load entry module and return exports
-/******/ 	return __webpack_require__(__webpack_require__.s = 8);
+/******/ 	return __webpack_require__(__webpack_require__.s = 10);
 /******/ })
 /************************************************************************/
 /******/ ([
@@ -11133,7 +11133,7 @@ var Modal = function () {
 
     this.openModalButton = (0, _jquery2.default)(".open-modal");
     this.modal = (0, _jquery2.default)(".modal");
-    this.closeModalbutton = (0, _jquery2.default)(".modal__close");
+    this.closeModalButton = (0, _jquery2.default)(".modal__close");
     this.events();
   }
 
@@ -11143,7 +11143,7 @@ var Modal = function () {
       // clicking the open modal button
       this.openModalButton.click(this.openModal.bind(this));
       // clicking the x close modal button
-      this.closeModalbutton.click(this.closeModal.bind(this));
+      this.closeModalButton.click(this.closeModal.bind(this));
       // pushes any key
       (0, _jquery2.default)(document).keyup(this.keyPressHandler.bind(this));
     }
@@ -11255,7 +11255,7 @@ var _noframework = __webpack_require__(1);
 
 var _noframework2 = _interopRequireDefault(_noframework);
 
-var _jquerySmoothScroll = __webpack_require__(7);
+var _jquerySmoothScroll = __webpack_require__(9);
 
 var _jquerySmoothScroll2 = _interopRequireDefault(_jquerySmoothScroll);
 
@@ -11267,7 +11267,7 @@ var StickyHeader = function () {
   function StickyHeader() {
     _classCallCheck(this, StickyHeader);
 
-    this.lazyImages = (0, _jquery2.default)('.lazyload');
+    this.lazyImages = (0, _jquery2.default)(".lazyload");
     this.siteHeader = (0, _jquery2.default)(".site-header");
     this.headerTriggerElement = (0, _jquery2.default)(".large-hero__title");
     this.createHeaderWaypoint();
@@ -11281,7 +11281,7 @@ var StickyHeader = function () {
   _createClass(StickyHeader, [{
     key: 'refreshWaypoints',
     value: function refreshWaypoints() {
-      this.lazyImages.load(function () {
+      this.lazyImages.on('load', function () {
         Waypoint.refreshAll();
       });
     }
@@ -11345,7 +11345,9 @@ exports.default = StickyHeader;
 
 /***/ }),
 /* 6 */,
-/* 7 */
+/* 7 */,
+/* 8 */,
+/* 9 */
 /***/ (function(module, exports, __webpack_require__) {
 
 var __WEBPACK_AMD_DEFINE_FACTORY__, __WEBPACK_AMD_DEFINE_ARRAY__, __WEBPACK_AMD_DEFINE_RESULT__;/*!
@@ -11693,7 +11695,7 @@ var __WEBPACK_AMD_DEFINE_FACTORY__, __WEBPACK_AMD_DEFINE_ARRAY__, __WEBPACK_AMD_
 
 
 /***/ }),
-/* 8 */
+/* 10 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -11722,7 +11724,7 @@ var _Modal2 = _interopRequireDefault(_Modal);
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
 var mobileMenu = new _MobileMenu2.default();
-//var revealOnScroll = new RevealOnScroll();
+
 new _RevealOnScroll2.default((0, _jquery2.default)(".feature-item"), "85%");
 new _RevealOnScroll2.default((0, _jquery2.default)(".testimonial"), "60%");
 var stickyHeader = new _StickyHeader2.default();

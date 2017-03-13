@@ -4,7 +4,7 @@ class Modal {
   constructor() {
     this.openModalButton = $(".open-modal");
     this.modal = $(".modal");
-    this.closeModalbutton = $(".modal__close");
+    this.closeModalButton = $(".modal__close");
     this.events();
   }
 
@@ -12,7 +12,7 @@ class Modal {
     // clicking the open modal button
     this.openModalButton.click(this.openModal.bind(this));
     // clicking the x close modal button
-    this.closeModalbutton.click(this.closeModal.bind(this));
+    this.closeModalButton.click(this.closeModal.bind(this));
     // pushes any key
     $(document).keyup(this.keyPressHandler.bind(this));
   }
